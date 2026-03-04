@@ -9,8 +9,15 @@ public partial class Tests
             Environment.GetEnvironmentVariable("FLOWISE_API_KEY") ??
             throw new AssertInconclusiveException("FLOWISE_API_KEY environment variable is not found.");
 
-        var client = new FlowiseClient(apiKey);
-        
+        var client = new FlowiseClient(authorizations: [
+            new EndPointAuthorization
+            {
+                Type = "Http",
+                Name = "Bearer",
+                Value = apiKey,
+            },
+        ]);
+
         return client;
     }
 }
