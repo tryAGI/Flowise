@@ -33,6 +33,7 @@ namespace Flowise
         /// <exception cref="global::Flowise.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Flowise.ChatMessageFeedback> UpdateChatMessageFeedbackForChatflowAsync(
             string id,
+
             global::Flowise.ChatMessageFeedback request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

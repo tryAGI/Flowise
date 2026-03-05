@@ -11,11 +11,11 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        ASC,
+        Asc,
         /// <summary>
         /// 
         /// </summary>
-        DESC,
+        Desc,
     }
 
     /// <summary>
@@ -30,8 +30,8 @@ namespace Flowise
         {
             return value switch
             {
-                GetAllChatMessagesOrder.ASC => "ASC",
-                GetAllChatMessagesOrder.DESC => "DESC",
+                GetAllChatMessagesOrder.Asc => "ASC",
+                GetAllChatMessagesOrder.Desc => "DESC",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -42,8 +42,8 @@ namespace Flowise
         {
             return value switch
             {
-                "ASC" => GetAllChatMessagesOrder.ASC,
-                "DESC" => GetAllChatMessagesOrder.DESC,
+                "ASC" => GetAllChatMessagesOrder.Asc,
+                "DESC" => GetAllChatMessagesOrder.Desc,
                 _ => null,
             };
         }

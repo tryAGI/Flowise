@@ -14,6 +14,7 @@ namespace Flowise
         /// <exception cref="global::Flowise.ApiException"></exception>
         global::System.Threading.Tasks.Task PatchDeleteUpsertHistoryAsync(
             string id,
+
             global::Flowise.PatchDeleteUpsertHistoryRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
 

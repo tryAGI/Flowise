@@ -14,6 +14,7 @@ namespace Flowise
         /// <exception cref="global::Flowise.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Flowise.DocumentStore> UpdateDocumentStoreAsync(
             global::System.Guid id,
+
             global::Flowise.DocumentStore request,
             global::System.Threading.CancellationToken cancellationToken = default);
 

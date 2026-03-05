@@ -14,6 +14,7 @@ namespace Flowise
         /// <exception cref="global::Flowise.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Flowise.Tool> UpdateToolAsync(
             string id,
+
             global::Flowise.Tool request,
             global::System.Threading.CancellationToken cancellationToken = default);
 

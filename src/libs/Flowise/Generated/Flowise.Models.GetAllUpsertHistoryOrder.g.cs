@@ -11,11 +11,11 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        ASC,
+        Asc,
         /// <summary>
         /// 
         /// </summary>
-        DESC,
+        Desc,
     }
 
     /// <summary>
@@ -30,8 +30,8 @@ namespace Flowise
         {
             return value switch
             {
-                GetAllUpsertHistoryOrder.ASC => "ASC",
-                GetAllUpsertHistoryOrder.DESC => "DESC",
+                GetAllUpsertHistoryOrder.Asc => "ASC",
+                GetAllUpsertHistoryOrder.Desc => "DESC",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -42,8 +42,8 @@ namespace Flowise
         {
             return value switch
             {
-                "ASC" => GetAllUpsertHistoryOrder.ASC,
-                "DESC" => GetAllUpsertHistoryOrder.DESC,
+                "ASC" => GetAllUpsertHistoryOrder.Asc,
+                "DESC" => GetAllUpsertHistoryOrder.Desc,
                 _ => null,
             };
         }
