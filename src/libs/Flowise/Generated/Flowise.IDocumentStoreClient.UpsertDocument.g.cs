@@ -14,6 +14,7 @@ namespace Flowise
         /// <exception cref="global::Flowise.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Flowise.VectorUpsertResponse> UpsertDocumentAsync(
             global::System.Guid id,
+
             global::Flowise.DocumentStoreLoaderForUpsert request,
             global::System.Threading.CancellationToken cancellationToken = default);
 

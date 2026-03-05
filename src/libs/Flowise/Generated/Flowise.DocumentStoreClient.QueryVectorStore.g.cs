@@ -29,6 +29,7 @@ namespace Flowise
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Flowise.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Flowise.QueryVectorStoreResponse> QueryVectorStoreAsync(
+
             global::Flowise.QueryVectorStoreRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

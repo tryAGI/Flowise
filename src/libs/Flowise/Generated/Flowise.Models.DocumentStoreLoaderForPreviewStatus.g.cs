@@ -11,31 +11,31 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        EMPTY,
+        Empty,
         /// <summary>
         /// 
         /// </summary>
-        SYNC,
+        Sync,
         /// <summary>
         /// 
         /// </summary>
-        SYNCING,
+        Syncing,
         /// <summary>
         /// 
         /// </summary>
-        STALE,
+        Stale,
         /// <summary>
         /// 
         /// </summary>
-        NEW,
+        New,
         /// <summary>
         /// 
         /// </summary>
-        UPSERTING,
+        Upserting,
         /// <summary>
         /// 
         /// </summary>
-        UPSERTED,
+        Upserted,
     }
 
     /// <summary>
@@ -50,13 +50,13 @@ namespace Flowise
         {
             return value switch
             {
-                DocumentStoreLoaderForPreviewStatus.EMPTY => "EMPTY",
-                DocumentStoreLoaderForPreviewStatus.SYNC => "SYNC",
-                DocumentStoreLoaderForPreviewStatus.SYNCING => "SYNCING",
-                DocumentStoreLoaderForPreviewStatus.STALE => "STALE",
-                DocumentStoreLoaderForPreviewStatus.NEW => "NEW",
-                DocumentStoreLoaderForPreviewStatus.UPSERTING => "UPSERTING",
-                DocumentStoreLoaderForPreviewStatus.UPSERTED => "UPSERTED",
+                DocumentStoreLoaderForPreviewStatus.Empty => "EMPTY",
+                DocumentStoreLoaderForPreviewStatus.Sync => "SYNC",
+                DocumentStoreLoaderForPreviewStatus.Syncing => "SYNCING",
+                DocumentStoreLoaderForPreviewStatus.Stale => "STALE",
+                DocumentStoreLoaderForPreviewStatus.New => "NEW",
+                DocumentStoreLoaderForPreviewStatus.Upserting => "UPSERTING",
+                DocumentStoreLoaderForPreviewStatus.Upserted => "UPSERTED",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -67,13 +67,13 @@ namespace Flowise
         {
             return value switch
             {
-                "EMPTY" => DocumentStoreLoaderForPreviewStatus.EMPTY,
-                "SYNC" => DocumentStoreLoaderForPreviewStatus.SYNC,
-                "SYNCING" => DocumentStoreLoaderForPreviewStatus.SYNCING,
-                "STALE" => DocumentStoreLoaderForPreviewStatus.STALE,
-                "NEW" => DocumentStoreLoaderForPreviewStatus.NEW,
-                "UPSERTING" => DocumentStoreLoaderForPreviewStatus.UPSERTING,
-                "UPSERTED" => DocumentStoreLoaderForPreviewStatus.UPSERTED,
+                "EMPTY" => DocumentStoreLoaderForPreviewStatus.Empty,
+                "SYNC" => DocumentStoreLoaderForPreviewStatus.Sync,
+                "SYNCING" => DocumentStoreLoaderForPreviewStatus.Syncing,
+                "STALE" => DocumentStoreLoaderForPreviewStatus.Stale,
+                "NEW" => DocumentStoreLoaderForPreviewStatus.New,
+                "UPSERTING" => DocumentStoreLoaderForPreviewStatus.Upserting,
+                "UPSERTED" => DocumentStoreLoaderForPreviewStatus.Upserted,
                 _ => null,
             };
         }

@@ -12,6 +12,7 @@ namespace Flowise
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Flowise.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Flowise.Assistant> CreateAssistantAsync(
+
             global::Flowise.Assistant request,
             global::System.Threading.CancellationToken cancellationToken = default);
 

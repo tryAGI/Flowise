@@ -15,6 +15,7 @@ namespace Flowise
         /// <exception cref="global::Flowise.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Flowise.CreatePredictionResponse> CreatePredictionAsync(
             string id,
+
             global::Flowise.Prediction request,
             global::System.Threading.CancellationToken cancellationToken = default);
 

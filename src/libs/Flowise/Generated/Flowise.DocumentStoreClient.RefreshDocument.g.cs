@@ -33,6 +33,7 @@ namespace Flowise
         /// <exception cref="global::Flowise.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Flowise.VectorUpsertResponse>> RefreshDocumentAsync(
             global::System.Guid id,
+
             global::Flowise.DocumentStoreLoaderForRefresh request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

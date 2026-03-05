@@ -11,11 +11,11 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        THUMBSUP,
+        ThumbsUp,
         /// <summary>
         /// 
         /// </summary>
-        THUMBSDOWN,
+        ThumbsDown,
     }
 
     /// <summary>
@@ -30,8 +30,8 @@ namespace Flowise
         {
             return value switch
             {
-                ChatMessageFeedbackRating.THUMBSUP => "THUMBS_UP",
-                ChatMessageFeedbackRating.THUMBSDOWN => "THUMBS_DOWN",
+                ChatMessageFeedbackRating.ThumbsUp => "THUMBS_UP",
+                ChatMessageFeedbackRating.ThumbsDown => "THUMBS_DOWN",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -42,8 +42,8 @@ namespace Flowise
         {
             return value switch
             {
-                "THUMBS_UP" => ChatMessageFeedbackRating.THUMBSUP,
-                "THUMBS_DOWN" => ChatMessageFeedbackRating.THUMBSDOWN,
+                "THUMBS_UP" => ChatMessageFeedbackRating.ThumbsUp,
+                "THUMBS_DOWN" => ChatMessageFeedbackRating.ThumbsDown,
                 _ => null,
             };
         }

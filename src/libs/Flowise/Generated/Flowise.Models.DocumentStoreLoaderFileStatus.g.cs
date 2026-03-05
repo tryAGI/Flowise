@@ -11,31 +11,31 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        EMPTY,
+        Empty,
         /// <summary>
         /// 
         /// </summary>
-        SYNC,
+        Sync,
         /// <summary>
         /// 
         /// </summary>
-        SYNCING,
+        Syncing,
         /// <summary>
         /// 
         /// </summary>
-        STALE,
+        Stale,
         /// <summary>
         /// 
         /// </summary>
-        NEW,
+        New,
         /// <summary>
         /// 
         /// </summary>
-        UPSERTING,
+        Upserting,
         /// <summary>
         /// 
         /// </summary>
-        UPSERTED,
+        Upserted,
     }
 
     /// <summary>
@@ -50,13 +50,13 @@ namespace Flowise
         {
             return value switch
             {
-                DocumentStoreLoaderFileStatus.EMPTY => "EMPTY",
-                DocumentStoreLoaderFileStatus.SYNC => "SYNC",
-                DocumentStoreLoaderFileStatus.SYNCING => "SYNCING",
-                DocumentStoreLoaderFileStatus.STALE => "STALE",
-                DocumentStoreLoaderFileStatus.NEW => "NEW",
-                DocumentStoreLoaderFileStatus.UPSERTING => "UPSERTING",
-                DocumentStoreLoaderFileStatus.UPSERTED => "UPSERTED",
+                DocumentStoreLoaderFileStatus.Empty => "EMPTY",
+                DocumentStoreLoaderFileStatus.Sync => "SYNC",
+                DocumentStoreLoaderFileStatus.Syncing => "SYNCING",
+                DocumentStoreLoaderFileStatus.Stale => "STALE",
+                DocumentStoreLoaderFileStatus.New => "NEW",
+                DocumentStoreLoaderFileStatus.Upserting => "UPSERTING",
+                DocumentStoreLoaderFileStatus.Upserted => "UPSERTED",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -67,13 +67,13 @@ namespace Flowise
         {
             return value switch
             {
-                "EMPTY" => DocumentStoreLoaderFileStatus.EMPTY,
-                "SYNC" => DocumentStoreLoaderFileStatus.SYNC,
-                "SYNCING" => DocumentStoreLoaderFileStatus.SYNCING,
-                "STALE" => DocumentStoreLoaderFileStatus.STALE,
-                "NEW" => DocumentStoreLoaderFileStatus.NEW,
-                "UPSERTING" => DocumentStoreLoaderFileStatus.UPSERTING,
-                "UPSERTED" => DocumentStoreLoaderFileStatus.UPSERTED,
+                "EMPTY" => DocumentStoreLoaderFileStatus.Empty,
+                "SYNC" => DocumentStoreLoaderFileStatus.Sync,
+                "SYNCING" => DocumentStoreLoaderFileStatus.Syncing,
+                "STALE" => DocumentStoreLoaderFileStatus.Stale,
+                "NEW" => DocumentStoreLoaderFileStatus.New,
+                "UPSERTING" => DocumentStoreLoaderFileStatus.Upserting,
+                "UPSERTED" => DocumentStoreLoaderFileStatus.Upserted,
                 _ => null,
             };
         }

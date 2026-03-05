@@ -16,6 +16,7 @@ namespace Flowise
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Flowise.CreateAttachmentResponse>> CreateAttachmentAsync(
             string chatflowId,
             string chatId,
+
             global::Flowise.CreateAttachmentRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
 

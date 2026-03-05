@@ -11,11 +11,11 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        CHATFLOW,
+        Chatflow,
         /// <summary>
         /// 
         /// </summary>
-        MULTIAGENT,
+        Multiagent,
     }
 
     /// <summary>
@@ -30,8 +30,8 @@ namespace Flowise
         {
             return value switch
             {
-                ChatflowType.CHATFLOW => "CHATFLOW",
-                ChatflowType.MULTIAGENT => "MULTIAGENT",
+                ChatflowType.Chatflow => "CHATFLOW",
+                ChatflowType.Multiagent => "MULTIAGENT",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -42,8 +42,8 @@ namespace Flowise
         {
             return value switch
             {
-                "CHATFLOW" => ChatflowType.CHATFLOW,
-                "MULTIAGENT" => ChatflowType.MULTIAGENT,
+                "CHATFLOW" => ChatflowType.Chatflow,
+                "MULTIAGENT" => ChatflowType.Multiagent,
                 _ => null,
             };
         }
