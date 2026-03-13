@@ -10,10 +10,10 @@ C# SDK for the [Flowise](https://flowiseai.com/) AI platform, auto-generated fro
 
 ```bash
 # Build the solution
-dotnet build Flowise.sln
+dotnet build Flowise.slnx
 
 # Build for release (also produces NuGet package)
-dotnet build Flowise.sln -c Release
+dotnet build Flowise.slnx -c Release
 
 # Run integration tests (requires FLOWISE_API_KEY env var)
 dotnet test src/tests/IntegrationTests/Flowise.IntegrationTests.csproj
