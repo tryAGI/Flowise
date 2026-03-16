@@ -1,8 +1,8 @@
 openapi: 3.0.1
 info:
-    title: Flowise API
-    version: 1.0.0
-    description: This is the API documentation for the Flowise service.
+  title: Flowise API
+  version: 1.0.0
+  description: This is the API documentation for the Flowise service.
 
 tags:
     - name: assistants
