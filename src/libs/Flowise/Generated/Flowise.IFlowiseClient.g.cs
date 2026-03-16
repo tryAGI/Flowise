@@ -4,7 +4,6 @@
 namespace Flowise
 {
     /// <summary>
-    /// This is the API documentation for the Flowise service.<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
