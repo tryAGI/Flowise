@@ -1,6 +1,7 @@
+set -e
 dotnet tool install --global autosdk.cli --prerelease
 rm -rf Generated
-curl -o openapi.yaml https://raw.githubusercontent.com/FlowiseAI/Flowise/refs/heads/main/packages/api-documentation/src/yml/swagger.yml
+curl --fail --silent --show-error -o openapi.yaml https://raw.githubusercontent.com/FlowiseAI/Flowise/refs/heads/main/packages/api-documentation/src/yml/swagger.yml
 
 autosdk generate openapi.yaml \
   --namespace Flowise \
