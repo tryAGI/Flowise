@@ -29,7 +29,6 @@ cd src/libs/Flowise && ./generate.sh
 The SDK code is **entirely auto-generated** — do not manually edit files in `src/libs/Flowise/Generated/`.
 
 1. `src/libs/Flowise/openapi.yaml` — the Flowise OpenAPI spec (fetched from upstream, then fixed)
-2. `src/helpers/FixOpenApiSpec/` — converts OpenAPI 3.1 → 3.0 format for compatibility
 3. `src/libs/Flowise/generate.sh` — orchestrates: download spec → fix spec → run AutoSDK CLI → output to `Generated/`
 4. CI auto-updates the spec every 3 hours and creates PRs if changes are detected
 
@@ -39,8 +38,6 @@ The SDK code is **entirely auto-generated** — do not manually edit files in `s
 |---------|---------|
 | `src/libs/Flowise/` | Main SDK library (`FlowiseClient`) |
 | `src/tests/IntegrationTests/` | Integration tests against real Flowise API |
-| `src/helpers/FixOpenApiSpec/` | OpenAPI spec fixer tool |
-| `src/helpers/GenerateDocs/` | Documentation generator from integration tests |
 
 ### Build Configuration
 
