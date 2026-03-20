@@ -285,7 +285,6 @@ namespace Flowise
                 }
             }
         }
-
         /// <summary>
         /// Update a variable by ID<br/>
         /// Update a specific variable by ID

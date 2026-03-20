@@ -246,7 +246,6 @@ namespace Flowise
                 }
             }
         }
-
         /// <summary>
         /// Create a new assistant<br/>
         /// Create a new assistant with the provided details

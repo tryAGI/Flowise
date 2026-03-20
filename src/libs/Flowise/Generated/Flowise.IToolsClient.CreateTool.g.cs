@@ -15,7 +15,6 @@ namespace Flowise
 
             global::Flowise.Tool request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create a new tool<br/>
         /// Create a new tool

@@ -279,7 +279,6 @@ namespace Flowise
                 }
             }
         }
-
         /// <summary>
         /// Create a new variable<br/>
         /// Create a new variable

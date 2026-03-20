@@ -15,7 +15,6 @@ namespace Flowise
 
             global::Flowise.Variable request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create a new variable<br/>
         /// Create a new variable

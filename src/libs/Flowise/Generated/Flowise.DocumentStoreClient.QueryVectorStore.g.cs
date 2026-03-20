@@ -246,7 +246,6 @@ namespace Flowise
                 }
             }
         }
-
         /// <summary>
         /// Retrieval query<br/>
         /// Retrieval query for the upserted chunks

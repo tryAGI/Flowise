@@ -17,7 +17,6 @@ namespace Flowise
 
             global::Flowise.PatchDeleteUpsertHistoryRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Delete upsert history records<br/>
         /// Soft delete upsert history records by IDs

@@ -17,7 +17,6 @@ namespace Flowise
 
             global::Flowise.Tool request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Update a tool by ID<br/>
         /// Update a specific tool by ID

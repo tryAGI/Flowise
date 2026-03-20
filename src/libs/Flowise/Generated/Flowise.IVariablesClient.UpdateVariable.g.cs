@@ -17,7 +17,6 @@ namespace Flowise
 
             global::Flowise.Variable request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Update a variable by ID<br/>
         /// Update a specific variable by ID

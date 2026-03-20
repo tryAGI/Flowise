@@ -17,7 +17,6 @@ namespace Flowise
 
             global::Flowise.VectorUpsertRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Upsert vector embeddings<br/>
         /// Upsert vector embeddings of documents in a chatflow

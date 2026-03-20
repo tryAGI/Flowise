@@ -285,7 +285,6 @@ namespace Flowise
                 }
             }
         }
-
         /// <summary>
         /// Update assistant details<br/>
         /// Update the details of an existing assistant

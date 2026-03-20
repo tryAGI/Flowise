@@ -19,7 +19,6 @@ namespace Flowise
 
             global::Flowise.CreateAttachmentRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create attachments array<br/>
         /// Return contents of the files in plain string format

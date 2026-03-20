@@ -15,7 +15,6 @@ namespace Flowise
 
             global::Flowise.ChatMessageFeedback request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create new chat message feedback<br/>
         /// Create new feedback for a specific chat flow.

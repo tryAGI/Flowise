@@ -17,7 +17,6 @@ namespace Flowise
 
             global::Flowise.DocumentStoreLoaderForRefresh request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Re-process and upsert all documents in document store<br/>
         /// Re-process and upsert all existing documents in document store

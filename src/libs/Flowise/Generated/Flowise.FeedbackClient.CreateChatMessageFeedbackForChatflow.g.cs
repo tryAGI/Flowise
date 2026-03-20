@@ -246,7 +246,6 @@ namespace Flowise
                 }
             }
         }
-
         /// <summary>
         /// Create new chat message feedback<br/>
         /// Create new feedback for a specific chat flow.

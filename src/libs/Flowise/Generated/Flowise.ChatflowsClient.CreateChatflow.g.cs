@@ -246,7 +246,6 @@ namespace Flowise
                 }
             }
         }
-
         /// <summary>
         /// Create a new chatflow<br/>
         /// Create a new chatflow with the provided details

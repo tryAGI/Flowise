@@ -15,7 +15,6 @@ namespace Flowise
 
             global::Flowise.QueryVectorStoreRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Retrieval query<br/>
         /// Retrieval query for the upserted chunks
