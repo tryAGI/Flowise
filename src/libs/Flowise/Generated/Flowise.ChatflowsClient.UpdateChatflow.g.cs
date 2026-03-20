@@ -285,7 +285,6 @@ namespace Flowise
                 }
             }
         }
-
         /// <summary>
         /// Update chatflow details<br/>
         /// Update the details of an existing chatflow

@@ -415,7 +415,6 @@ namespace Flowise
                 }
             }
         }
-
         /// <summary>
         /// Send message to flow and get AI response<br/>
         /// Send a message to your flow and receive an AI-generated response. This is the primary endpoint for interacting with your flows and assistants.<br/>

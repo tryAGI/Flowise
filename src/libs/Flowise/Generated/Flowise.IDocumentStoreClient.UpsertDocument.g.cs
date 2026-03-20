@@ -17,7 +17,6 @@ namespace Flowise
 
             global::Flowise.DocumentStoreLoaderForUpsert request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Upsert document to document store<br/>
         /// Upsert document to document store

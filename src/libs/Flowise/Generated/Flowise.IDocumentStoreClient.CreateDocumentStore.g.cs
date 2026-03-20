@@ -15,7 +15,6 @@ namespace Flowise
 
             global::Flowise.DocumentStore request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create a new document store<br/>
         /// Creates a new document store with the provided details

@@ -345,7 +345,6 @@ namespace Flowise
                 }
             }
         }
-
         /// <summary>
         /// Create attachments array<br/>
         /// Return contents of the files in plain string format

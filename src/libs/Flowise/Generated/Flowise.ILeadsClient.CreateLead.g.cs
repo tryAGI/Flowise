@@ -15,7 +15,6 @@ namespace Flowise
 
             global::Flowise.Lead request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create a new lead in a chatflow<br/>
         /// Create a new lead associated with a specific chatflow

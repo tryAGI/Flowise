@@ -15,7 +15,6 @@ namespace Flowise
 
             global::Flowise.Assistant request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create a new assistant<br/>
         /// Create a new assistant with the provided details

@@ -15,7 +15,6 @@ namespace Flowise
 
             global::Flowise.Chatflow request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create a new chatflow<br/>
         /// Create a new chatflow with the provided details

@@ -21,7 +21,6 @@ namespace Flowise
 
             global::Flowise.Document request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Update a specific chunk<br/>
         /// Updates a specific chunk from a document loader
