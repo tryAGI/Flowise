@@ -21,7 +21,7 @@ public partial class Tests
 
         foreach (var assistant in assistants)
         {
-            Console.WriteLine($"Assistant: {assistant.Name} (ID: {assistant.Id})");
+            Console.WriteLine($"Assistant: {assistant.Id} (Credential: {assistant.Credential})");
         }
     }
 }

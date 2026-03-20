@@ -15,7 +15,7 @@ public partial class Tests
     {
         using var client = GetAuthenticatedClient();
 
-        var chatflows = await client.Chatflows.GetAllChatflowsAsync();
+        var chatflows = await client.Chatflows.ListChatflowsAsync();
 
         chatflows.Should().NotBeNull();
 
