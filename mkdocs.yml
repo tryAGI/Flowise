@@ -3,7 +3,10 @@ nav:
 - Overview: index.md
 # EXAMPLES:START
 - Examples:
-  - Test: samples/Test.md
+  - Test: examples/test.md
+  - List Chatflows: examples/list-chatflows.md
+  - List Assistants: examples/list-assistants.md
+  - Ping Server: examples/ping-server.md
 # EXAMPLES:END
         
 theme:
