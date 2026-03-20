@@ -60,75 +60,75 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, string>? Type8 { get; set; }
+        public global::System.Collections.Generic.IList<global::Flowise.UsedTool>? Type8 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Flowise.UsedTool>? Type9 { get; set; }
+        public global::Flowise.UsedTool? Type9 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Flowise.UsedTool? Type10 { get; set; }
+        public global::System.Collections.Generic.IList<global::Flowise.FileAnnotation>? Type10 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Flowise.FileAnnotation>? Type11 { get; set; }
+        public global::Flowise.FileAnnotation? Type11 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Flowise.FileAnnotation? Type12 { get; set; }
+        public global::System.Collections.Generic.IList<global::Flowise.AgentReasoning>? Type12 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Flowise.AgentReasoning>? Type13 { get; set; }
+        public global::Flowise.AgentReasoning? Type13 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Flowise.AgentReasoning? Type14 { get; set; }
+        public global::System.Collections.Generic.IList<global::Flowise.FileUpload>? Type14 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<string>? Type15 { get; set; }
+        public global::Flowise.FileUpload? Type15 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Flowise.FileUpload>? Type16 { get; set; }
+        public global::System.Collections.Generic.IList<global::Flowise.Action>? Type16 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Flowise.FileUpload? Type17 { get; set; }
+        public global::Flowise.Action? Type17 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Flowise.Action>? Type18 { get; set; }
+        public global::Flowise.ChatMessageChatType? Type18 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Flowise.Action? Type19 { get; set; }
+        public global::System.DateTime? Type19 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Flowise.ActionMapping? Type20 { get; set; }
+        public global::Flowise.Chatflow? Type20 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Flowise.ChatMessageChatType? Type21 { get; set; }
+        public bool? Type21 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.DateTime? Type22 { get; set; }
+        public global::Flowise.ChatflowType? Type22 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Flowise.Chatflow? Type23 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, string>? Type23 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public bool? Type24 { get; set; }
+        public global::Flowise.ActionMapping? Type24 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Flowise.ChatflowType? Type25 { get; set; }
+        public global::System.Collections.Generic.IList<string>? Type25 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -469,15 +469,15 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<string>? ListType4 { get; set; }
+        public global::System.Collections.Generic.List<global::Flowise.FileUpload>? ListType4 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Flowise.FileUpload>? ListType5 { get; set; }
+        public global::System.Collections.Generic.List<global::Flowise.Action>? ListType5 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Flowise.Action>? ListType6 { get; set; }
+        public global::System.Collections.Generic.List<string>? ListType6 { get; set; }
         /// <summary>
         /// 
         /// </summary>
