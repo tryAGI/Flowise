@@ -100,7 +100,7 @@ namespace Flowise
                 .AddOptionalParameter("sessionId", sessionId)
                 .AddOptionalParameter("startDate", startDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                 .AddOptionalParameter("endDate", endDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
-                .AddOptionalParameter("feedback", feedback?.ToString())
+                .AddOptionalParameter("feedback", feedback?.ToString().ToLowerInvariant())
                 .AddOptionalParameter("feedbackType", feedbackType?.ToValueString()) 
                 ; 
             var __path = __pathBuilder.ToString();
