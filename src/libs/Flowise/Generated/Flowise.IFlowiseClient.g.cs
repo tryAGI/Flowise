@@ -52,12 +52,12 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        public ChatmessageClient Chatmessage { get; }
+        public ChatflowsClient Chatflows { get; }
 
         /// <summary>
         /// 
         /// </summary>
-        public ChatflowsClient Chatflows { get; }
+        public ChatmessageClient Chatmessage { get; }
 
         /// <summary>
         /// 

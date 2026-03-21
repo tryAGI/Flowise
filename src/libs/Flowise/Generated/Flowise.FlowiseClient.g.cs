@@ -57,7 +57,7 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        public ChatmessageClient Chatmessage => new ChatmessageClient(HttpClient, authorizations: Authorizations)
+        public ChatflowsClient Chatflows => new ChatflowsClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -66,7 +66,7 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        public ChatflowsClient Chatflows => new ChatflowsClient(HttpClient, authorizations: Authorizations)
+        public ChatmessageClient Chatmessage => new ChatmessageClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
