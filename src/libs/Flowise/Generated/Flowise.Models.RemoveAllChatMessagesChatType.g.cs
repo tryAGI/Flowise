@@ -11,11 +11,11 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        Internal,
+        External,
         /// <summary>
         /// 
         /// </summary>
-        External,
+        Internal,
     }
 
     /// <summary>
@@ -30,8 +30,8 @@ namespace Flowise
         {
             return value switch
             {
-                RemoveAllChatMessagesChatType.Internal => "INTERNAL",
                 RemoveAllChatMessagesChatType.External => "EXTERNAL",
+                RemoveAllChatMessagesChatType.Internal => "INTERNAL",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -42,8 +42,8 @@ namespace Flowise
         {
             return value switch
             {
-                "INTERNAL" => RemoveAllChatMessagesChatType.Internal,
                 "EXTERNAL" => RemoveAllChatMessagesChatType.External,
+                "INTERNAL" => RemoveAllChatMessagesChatType.Internal,
                 _ => null,
             };
         }

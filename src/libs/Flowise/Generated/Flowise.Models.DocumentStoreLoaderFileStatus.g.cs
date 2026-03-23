@@ -15,6 +15,14 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
+        New,
+        /// <summary>
+        /// 
+        /// </summary>
+        Stale,
+        /// <summary>
+        /// 
+        /// </summary>
         Sync,
         /// <summary>
         /// 
@@ -23,19 +31,11 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        Stale,
-        /// <summary>
-        /// 
-        /// </summary>
-        New,
+        Upserted,
         /// <summary>
         /// 
         /// </summary>
         Upserting,
-        /// <summary>
-        /// 
-        /// </summary>
-        Upserted,
     }
 
     /// <summary>
@@ -51,12 +51,12 @@ namespace Flowise
             return value switch
             {
                 DocumentStoreLoaderFileStatus.Empty => "EMPTY",
+                DocumentStoreLoaderFileStatus.New => "NEW",
+                DocumentStoreLoaderFileStatus.Stale => "STALE",
                 DocumentStoreLoaderFileStatus.Sync => "SYNC",
                 DocumentStoreLoaderFileStatus.Syncing => "SYNCING",
-                DocumentStoreLoaderFileStatus.Stale => "STALE",
-                DocumentStoreLoaderFileStatus.New => "NEW",
-                DocumentStoreLoaderFileStatus.Upserting => "UPSERTING",
                 DocumentStoreLoaderFileStatus.Upserted => "UPSERTED",
+                DocumentStoreLoaderFileStatus.Upserting => "UPSERTING",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -68,12 +68,12 @@ namespace Flowise
             return value switch
             {
                 "EMPTY" => DocumentStoreLoaderFileStatus.Empty,
+                "NEW" => DocumentStoreLoaderFileStatus.New,
+                "STALE" => DocumentStoreLoaderFileStatus.Stale,
                 "SYNC" => DocumentStoreLoaderFileStatus.Sync,
                 "SYNCING" => DocumentStoreLoaderFileStatus.Syncing,
-                "STALE" => DocumentStoreLoaderFileStatus.Stale,
-                "NEW" => DocumentStoreLoaderFileStatus.New,
-                "UPSERTING" => DocumentStoreLoaderFileStatus.Upserting,
                 "UPSERTED" => DocumentStoreLoaderFileStatus.Upserted,
+                "UPSERTING" => DocumentStoreLoaderFileStatus.Upserting,
                 _ => null,
             };
         }

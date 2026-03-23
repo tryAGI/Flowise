@@ -15,6 +15,14 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
+        New,
+        /// <summary>
+        /// 
+        /// </summary>
+        Stale,
+        /// <summary>
+        /// 
+        /// </summary>
         Sync,
         /// <summary>
         /// 
@@ -23,19 +31,11 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        Stale,
-        /// <summary>
-        /// 
-        /// </summary>
-        New,
+        Upserted,
         /// <summary>
         /// 
         /// </summary>
         Upserting,
-        /// <summary>
-        /// 
-        /// </summary>
-        Upserted,
     }
 
     /// <summary>
@@ -51,12 +51,12 @@ namespace Flowise
             return value switch
             {
                 DocumentStoreStatus.Empty => "EMPTY",
+                DocumentStoreStatus.New => "NEW",
+                DocumentStoreStatus.Stale => "STALE",
                 DocumentStoreStatus.Sync => "SYNC",
                 DocumentStoreStatus.Syncing => "SYNCING",
-                DocumentStoreStatus.Stale => "STALE",
-                DocumentStoreStatus.New => "NEW",
-                DocumentStoreStatus.Upserting => "UPSERTING",
                 DocumentStoreStatus.Upserted => "UPSERTED",
+                DocumentStoreStatus.Upserting => "UPSERTING",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -68,12 +68,12 @@ namespace Flowise
             return value switch
             {
                 "EMPTY" => DocumentStoreStatus.Empty,
+                "NEW" => DocumentStoreStatus.New,
+                "STALE" => DocumentStoreStatus.Stale,
                 "SYNC" => DocumentStoreStatus.Sync,
                 "SYNCING" => DocumentStoreStatus.Syncing,
-                "STALE" => DocumentStoreStatus.Stale,
-                "NEW" => DocumentStoreStatus.New,
-                "UPSERTING" => DocumentStoreStatus.Upserting,
                 "UPSERTED" => DocumentStoreStatus.Upserted,
+                "UPSERTING" => DocumentStoreStatus.Upserting,
                 _ => null,
             };
         }

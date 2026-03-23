@@ -12,35 +12,11 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        ImagePng,
-        /// <summary>
-        /// 
-        /// </summary>
-        ImageJpeg,
-        /// <summary>
-        /// 
-        /// </summary>
-        ImageJpg,
-        /// <summary>
-        /// 
-        /// </summary>
-        ImageGif,
-        /// <summary>
-        /// 
-        /// </summary>
-        ImageWebp,
+        AudioAac,
         /// <summary>
         /// 
         /// </summary>
         AudioMp4,
-        /// <summary>
-        /// 
-        /// </summary>
-        AudioWebm,
-        /// <summary>
-        /// 
-        /// </summary>
-        AudioWav,
         /// <summary>
         /// 
         /// </summary>
@@ -52,7 +28,31 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        AudioAac,
+        AudioWav,
+        /// <summary>
+        /// 
+        /// </summary>
+        AudioWebm,
+        /// <summary>
+        /// 
+        /// </summary>
+        ImageGif,
+        /// <summary>
+        /// 
+        /// </summary>
+        ImageJpeg,
+        /// <summary>
+        /// 
+        /// </summary>
+        ImageJpg,
+        /// <summary>
+        /// 
+        /// </summary>
+        ImagePng,
+        /// <summary>
+        /// 
+        /// </summary>
+        ImageWebp,
     }
 
     /// <summary>
@@ -67,17 +67,17 @@ namespace Flowise
         {
             return value switch
             {
-                PredictionUploadMime.ImagePng => "image/png",
-                PredictionUploadMime.ImageJpeg => "image/jpeg",
-                PredictionUploadMime.ImageJpg => "image/jpg",
-                PredictionUploadMime.ImageGif => "image/gif",
-                PredictionUploadMime.ImageWebp => "image/webp",
+                PredictionUploadMime.AudioAac => "audio/aac",
                 PredictionUploadMime.AudioMp4 => "audio/mp4",
-                PredictionUploadMime.AudioWebm => "audio/webm",
-                PredictionUploadMime.AudioWav => "audio/wav",
                 PredictionUploadMime.AudioMpeg => "audio/mpeg",
                 PredictionUploadMime.AudioOgg => "audio/ogg",
-                PredictionUploadMime.AudioAac => "audio/aac",
+                PredictionUploadMime.AudioWav => "audio/wav",
+                PredictionUploadMime.AudioWebm => "audio/webm",
+                PredictionUploadMime.ImageGif => "image/gif",
+                PredictionUploadMime.ImageJpeg => "image/jpeg",
+                PredictionUploadMime.ImageJpg => "image/jpg",
+                PredictionUploadMime.ImagePng => "image/png",
+                PredictionUploadMime.ImageWebp => "image/webp",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -88,17 +88,17 @@ namespace Flowise
         {
             return value switch
             {
-                "image/png" => PredictionUploadMime.ImagePng,
-                "image/jpeg" => PredictionUploadMime.ImageJpeg,
-                "image/jpg" => PredictionUploadMime.ImageJpg,
-                "image/gif" => PredictionUploadMime.ImageGif,
-                "image/webp" => PredictionUploadMime.ImageWebp,
+                "audio/aac" => PredictionUploadMime.AudioAac,
                 "audio/mp4" => PredictionUploadMime.AudioMp4,
-                "audio/webm" => PredictionUploadMime.AudioWebm,
-                "audio/wav" => PredictionUploadMime.AudioWav,
                 "audio/mpeg" => PredictionUploadMime.AudioMpeg,
                 "audio/ogg" => PredictionUploadMime.AudioOgg,
-                "audio/aac" => PredictionUploadMime.AudioAac,
+                "audio/wav" => PredictionUploadMime.AudioWav,
+                "audio/webm" => PredictionUploadMime.AudioWebm,
+                "image/gif" => PredictionUploadMime.ImageGif,
+                "image/jpeg" => PredictionUploadMime.ImageJpeg,
+                "image/jpg" => PredictionUploadMime.ImageJpg,
+                "image/png" => PredictionUploadMime.ImagePng,
+                "image/webp" => PredictionUploadMime.ImageWebp,
                 _ => null,
             };
         }

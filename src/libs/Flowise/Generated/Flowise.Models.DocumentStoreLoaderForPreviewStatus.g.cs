@@ -15,6 +15,14 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
+        New,
+        /// <summary>
+        /// 
+        /// </summary>
+        Stale,
+        /// <summary>
+        /// 
+        /// </summary>
         Sync,
         /// <summary>
         /// 
@@ -23,19 +31,11 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        Stale,
-        /// <summary>
-        /// 
-        /// </summary>
-        New,
+        Upserted,
         /// <summary>
         /// 
         /// </summary>
         Upserting,
-        /// <summary>
-        /// 
-        /// </summary>
-        Upserted,
     }
 
     /// <summary>
@@ -51,12 +51,12 @@ namespace Flowise
             return value switch
             {
                 DocumentStoreLoaderForPreviewStatus.Empty => "EMPTY",
+                DocumentStoreLoaderForPreviewStatus.New => "NEW",
+                DocumentStoreLoaderForPreviewStatus.Stale => "STALE",
                 DocumentStoreLoaderForPreviewStatus.Sync => "SYNC",
                 DocumentStoreLoaderForPreviewStatus.Syncing => "SYNCING",
-                DocumentStoreLoaderForPreviewStatus.Stale => "STALE",
-                DocumentStoreLoaderForPreviewStatus.New => "NEW",
-                DocumentStoreLoaderForPreviewStatus.Upserting => "UPSERTING",
                 DocumentStoreLoaderForPreviewStatus.Upserted => "UPSERTED",
+                DocumentStoreLoaderForPreviewStatus.Upserting => "UPSERTING",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -68,12 +68,12 @@ namespace Flowise
             return value switch
             {
                 "EMPTY" => DocumentStoreLoaderForPreviewStatus.Empty,
+                "NEW" => DocumentStoreLoaderForPreviewStatus.New,
+                "STALE" => DocumentStoreLoaderForPreviewStatus.Stale,
                 "SYNC" => DocumentStoreLoaderForPreviewStatus.Sync,
                 "SYNCING" => DocumentStoreLoaderForPreviewStatus.Syncing,
-                "STALE" => DocumentStoreLoaderForPreviewStatus.Stale,
-                "NEW" => DocumentStoreLoaderForPreviewStatus.New,
-                "UPSERTING" => DocumentStoreLoaderForPreviewStatus.Upserting,
                 "UPSERTED" => DocumentStoreLoaderForPreviewStatus.Upserted,
+                "UPSERTING" => DocumentStoreLoaderForPreviewStatus.Upserting,
                 _ => null,
             };
         }
