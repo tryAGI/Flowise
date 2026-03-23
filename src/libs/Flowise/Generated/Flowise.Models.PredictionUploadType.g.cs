@@ -16,11 +16,11 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        Url,
+        File,
         /// <summary>
         /// 
         /// </summary>
-        File,
+        File_full,
         /// <summary>
         /// 
         /// </summary>
@@ -28,7 +28,7 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        File_full,
+        Url,
     }
 
     /// <summary>
@@ -44,10 +44,10 @@ namespace Flowise
             return value switch
             {
                 PredictionUploadType.Audio => "audio",
-                PredictionUploadType.Url => "url",
                 PredictionUploadType.File => "file",
-                PredictionUploadType.File_rag => "file:rag",
                 PredictionUploadType.File_full => "file:full",
+                PredictionUploadType.File_rag => "file:rag",
+                PredictionUploadType.Url => "url",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -59,10 +59,10 @@ namespace Flowise
             return value switch
             {
                 "audio" => PredictionUploadType.Audio,
-                "url" => PredictionUploadType.Url,
                 "file" => PredictionUploadType.File,
-                "file:rag" => PredictionUploadType.File_rag,
                 "file:full" => PredictionUploadType.File_full,
+                "file:rag" => PredictionUploadType.File_rag,
+                "url" => PredictionUploadType.Url,
                 _ => null,
             };
         }
