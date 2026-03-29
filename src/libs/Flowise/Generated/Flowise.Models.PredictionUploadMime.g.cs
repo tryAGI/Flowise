@@ -12,47 +12,47 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        AudioDivideaac,
+        AudioAac,
         /// <summary>
         /// 
         /// </summary>
-        AudioDividemp4,
+        AudioMp4,
         /// <summary>
         /// 
         /// </summary>
-        AudioDividempeg,
+        AudioMpeg,
         /// <summary>
         /// 
         /// </summary>
-        AudioDivideogg,
+        AudioOgg,
         /// <summary>
         /// 
         /// </summary>
-        AudioDividewav,
+        AudioWav,
         /// <summary>
         /// 
         /// </summary>
-        AudioDividewebm,
+        AudioWebm,
         /// <summary>
         /// 
         /// </summary>
-        ImageDividegif,
+        ImageGif,
         /// <summary>
         /// 
         /// </summary>
-        ImageDividejpeg,
+        ImageJpeg,
         /// <summary>
         /// 
         /// </summary>
-        ImageDividejpg,
+        ImageJpg,
         /// <summary>
         /// 
         /// </summary>
-        ImageDividepng,
+        ImagePng,
         /// <summary>
         /// 
         /// </summary>
-        ImageDividewebp,
+        ImageWebp,
     }
 
     /// <summary>
@@ -67,17 +67,17 @@ namespace Flowise
         {
             return value switch
             {
-                PredictionUploadMime.AudioDivideaac => "audio/aac",
-                PredictionUploadMime.AudioDividemp4 => "audio/mp4",
-                PredictionUploadMime.AudioDividempeg => "audio/mpeg",
-                PredictionUploadMime.AudioDivideogg => "audio/ogg",
-                PredictionUploadMime.AudioDividewav => "audio/wav",
-                PredictionUploadMime.AudioDividewebm => "audio/webm",
-                PredictionUploadMime.ImageDividegif => "image/gif",
-                PredictionUploadMime.ImageDividejpeg => "image/jpeg",
-                PredictionUploadMime.ImageDividejpg => "image/jpg",
-                PredictionUploadMime.ImageDividepng => "image/png",
-                PredictionUploadMime.ImageDividewebp => "image/webp",
+                PredictionUploadMime.AudioAac => "audio/aac",
+                PredictionUploadMime.AudioMp4 => "audio/mp4",
+                PredictionUploadMime.AudioMpeg => "audio/mpeg",
+                PredictionUploadMime.AudioOgg => "audio/ogg",
+                PredictionUploadMime.AudioWav => "audio/wav",
+                PredictionUploadMime.AudioWebm => "audio/webm",
+                PredictionUploadMime.ImageGif => "image/gif",
+                PredictionUploadMime.ImageJpeg => "image/jpeg",
+                PredictionUploadMime.ImageJpg => "image/jpg",
+                PredictionUploadMime.ImagePng => "image/png",
+                PredictionUploadMime.ImageWebp => "image/webp",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -88,17 +88,17 @@ namespace Flowise
         {
             return value switch
             {
-                "audio/aac" => PredictionUploadMime.AudioDivideaac,
-                "audio/mp4" => PredictionUploadMime.AudioDividemp4,
-                "audio/mpeg" => PredictionUploadMime.AudioDividempeg,
-                "audio/ogg" => PredictionUploadMime.AudioDivideogg,
-                "audio/wav" => PredictionUploadMime.AudioDividewav,
-                "audio/webm" => PredictionUploadMime.AudioDividewebm,
-                "image/gif" => PredictionUploadMime.ImageDividegif,
-                "image/jpeg" => PredictionUploadMime.ImageDividejpeg,
-                "image/jpg" => PredictionUploadMime.ImageDividejpg,
-                "image/png" => PredictionUploadMime.ImageDividepng,
-                "image/webp" => PredictionUploadMime.ImageDividewebp,
+                "audio/aac" => PredictionUploadMime.AudioAac,
+                "audio/mp4" => PredictionUploadMime.AudioMp4,
+                "audio/mpeg" => PredictionUploadMime.AudioMpeg,
+                "audio/ogg" => PredictionUploadMime.AudioOgg,
+                "audio/wav" => PredictionUploadMime.AudioWav,
+                "audio/webm" => PredictionUploadMime.AudioWebm,
+                "image/gif" => PredictionUploadMime.ImageGif,
+                "image/jpeg" => PredictionUploadMime.ImageJpeg,
+                "image/jpg" => PredictionUploadMime.ImageJpg,
+                "image/png" => PredictionUploadMime.ImagePng,
+                "image/webp" => PredictionUploadMime.ImageWebp,
                 _ => null,
             };
         }
