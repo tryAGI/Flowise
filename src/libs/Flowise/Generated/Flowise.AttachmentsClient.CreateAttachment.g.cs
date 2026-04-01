@@ -367,7 +367,6 @@ namespace Flowise
             bool? base64 = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Flowise.CreateAttachmentRequest
             {
                 Files = files,
