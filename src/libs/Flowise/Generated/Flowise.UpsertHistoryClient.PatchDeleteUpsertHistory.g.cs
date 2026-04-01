@@ -252,6 +252,7 @@ namespace Flowise
             global::System.Collections.Generic.IList<global::System.Guid>? ids = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Flowise.PatchDeleteUpsertHistoryRequest
             {
                 Ids = ids,

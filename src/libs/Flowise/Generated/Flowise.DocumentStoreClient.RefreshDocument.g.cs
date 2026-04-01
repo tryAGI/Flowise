@@ -265,6 +265,7 @@ namespace Flowise
             global::System.Collections.Generic.IList<global::Flowise.DocumentStoreLoaderForUpsert>? items = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Flowise.DocumentStoreLoaderForRefresh
             {
                 Items = items,
