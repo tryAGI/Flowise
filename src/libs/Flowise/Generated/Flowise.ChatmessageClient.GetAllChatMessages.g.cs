@@ -5,6 +5,25 @@ namespace Flowise
 {
     public partial class ChatmessageClient
     {
+
+
+        private static readonly global::Flowise.EndPointSecurityRequirement s_GetAllChatMessagesSecurityRequirement0 =
+            new global::Flowise.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Flowise.EndPointAuthorizationRequirement[]
+                {                    new global::Flowise.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Flowise.EndPointSecurityRequirement[] s_GetAllChatMessagesSecurityRequirements =
+            new global::Flowise.EndPointSecurityRequirement[]
+            {                s_GetAllChatMessagesSecurityRequirement0,
+            };
         partial void PrepareGetAllChatMessagesArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string id,
@@ -89,6 +108,12 @@ namespace Flowise
                 feedback: ref feedback,
                 feedbackType: ref feedbackType);
 
+
+            var __authorizations = global::Flowise.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetAllChatMessagesSecurityRequirements,
+                operationName: "GetAllChatMessagesAsync");
+
             var __pathBuilder = new global::Flowise.PathBuilder(
                 path: $"/chatmessage/{id}",
                 baseUri: HttpClient.BaseAddress); 
@@ -102,7 +127,7 @@ namespace Flowise
                 .AddOptionalParameter("endDate", endDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                 .AddOptionalParameter("feedback", feedback?.ToString().ToLowerInvariant())
                 .AddOptionalParameter("feedbackType", feedbackType?.ToValueString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -112,7 +137,7 @@ namespace Flowise
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

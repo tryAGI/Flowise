@@ -5,6 +5,25 @@ namespace Flowise
 {
     public partial class FeedbackClient
     {
+
+
+        private static readonly global::Flowise.EndPointSecurityRequirement s_UpdateChatMessageFeedbackForChatflowSecurityRequirement0 =
+            new global::Flowise.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Flowise.EndPointAuthorizationRequirement[]
+                {                    new global::Flowise.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Flowise.EndPointSecurityRequirement[] s_UpdateChatMessageFeedbackForChatflowSecurityRequirements =
+            new global::Flowise.EndPointSecurityRequirement[]
+            {                s_UpdateChatMessageFeedbackForChatflowSecurityRequirement0,
+            };
         partial void PrepareUpdateChatMessageFeedbackForChatflowArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string id,
@@ -46,9 +65,15 @@ namespace Flowise
                 id: ref id,
                 request: request);
 
+
+            var __authorizations = global::Flowise.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_UpdateChatMessageFeedbackForChatflowSecurityRequirements,
+                operationName: "UpdateChatMessageFeedbackForChatflowAsync");
+
             var __pathBuilder = new global::Flowise.PathBuilder(
                 path: $"/feedback/{id}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Put,
@@ -58,7 +83,7 @@ namespace Flowise
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

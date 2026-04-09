@@ -5,6 +5,25 @@ namespace Flowise
 {
     public partial class LeadsClient
     {
+
+
+        private static readonly global::Flowise.EndPointSecurityRequirement s_GetAllLeadsForChatflowSecurityRequirement0 =
+            new global::Flowise.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Flowise.EndPointAuthorizationRequirement[]
+                {                    new global::Flowise.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Flowise.EndPointSecurityRequirement[] s_GetAllLeadsForChatflowSecurityRequirements =
+            new global::Flowise.EndPointSecurityRequirement[]
+            {                s_GetAllLeadsForChatflowSecurityRequirement0,
+            };
         partial void PrepareGetAllLeadsForChatflowArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string id);
@@ -38,9 +57,15 @@ namespace Flowise
                 httpClient: HttpClient,
                 id: ref id);
 
+
+            var __authorizations = global::Flowise.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetAllLeadsForChatflowSecurityRequirements,
+                operationName: "GetAllLeadsForChatflowAsync");
+
             var __pathBuilder = new global::Flowise.PathBuilder(
                 path: $"/leads/{id}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -50,7 +75,7 @@ namespace Flowise
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

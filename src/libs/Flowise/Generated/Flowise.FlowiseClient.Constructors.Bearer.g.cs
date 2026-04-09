@@ -6,6 +6,7 @@ namespace Flowise
     public sealed partial class FlowiseClient
     {
         /// <inheritdoc cref="FlowiseClient(global::System.Net.Http.HttpClient?, global::System.Uri?, global::System.Collections.Generic.List{global::Flowise.EndPointAuthorization}?, bool)"/>
+
         public FlowiseClient(
             string apiKey,
             global::System.Net.Http.HttpClient? httpClient = null,

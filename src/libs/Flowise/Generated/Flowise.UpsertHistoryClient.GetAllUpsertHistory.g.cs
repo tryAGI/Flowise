@@ -5,6 +5,25 @@ namespace Flowise
 {
     public partial class UpsertHistoryClient
     {
+
+
+        private static readonly global::Flowise.EndPointSecurityRequirement s_GetAllUpsertHistorySecurityRequirement0 =
+            new global::Flowise.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Flowise.EndPointAuthorizationRequirement[]
+                {                    new global::Flowise.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Flowise.EndPointSecurityRequirement[] s_GetAllUpsertHistorySecurityRequirements =
+            new global::Flowise.EndPointSecurityRequirement[]
+            {                s_GetAllUpsertHistorySecurityRequirement0,
+            };
         partial void PrepareGetAllUpsertHistoryArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string id,
@@ -55,6 +74,12 @@ namespace Flowise
                 startDate: ref startDate,
                 endDate: ref endDate);
 
+
+            var __authorizations = global::Flowise.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetAllUpsertHistorySecurityRequirements,
+                operationName: "GetAllUpsertHistoryAsync");
+
             var __pathBuilder = new global::Flowise.PathBuilder(
                 path: $"/upsert-history/{id}",
                 baseUri: HttpClient.BaseAddress); 
@@ -62,7 +87,7 @@ namespace Flowise
                 .AddOptionalParameter("order", order?.ToValueString())
                 .AddOptionalParameter("startDate", startDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                 .AddOptionalParameter("endDate", endDate?.ToString("yyyy-MM-ddTHH:mm:ssZ")) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -72,7 +97,7 @@ namespace Flowise
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

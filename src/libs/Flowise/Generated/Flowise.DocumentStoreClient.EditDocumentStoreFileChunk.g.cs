@@ -5,6 +5,25 @@ namespace Flowise
 {
     public partial class DocumentStoreClient
     {
+
+
+        private static readonly global::Flowise.EndPointSecurityRequirement s_EditDocumentStoreFileChunkSecurityRequirement0 =
+            new global::Flowise.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Flowise.EndPointAuthorizationRequirement[]
+                {                    new global::Flowise.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Flowise.EndPointSecurityRequirement[] s_EditDocumentStoreFileChunkSecurityRequirements =
+            new global::Flowise.EndPointSecurityRequirement[]
+            {                s_EditDocumentStoreFileChunkSecurityRequirement0,
+            };
         partial void PrepareEditDocumentStoreFileChunkArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string storeId,
@@ -56,9 +75,15 @@ namespace Flowise
                 chunkId: ref chunkId,
                 request: request);
 
+
+            var __authorizations = global::Flowise.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_EditDocumentStoreFileChunkSecurityRequirements,
+                operationName: "EditDocumentStoreFileChunkAsync");
+
             var __pathBuilder = new global::Flowise.PathBuilder(
                 path: $"/document-store/chunks/{storeId}/{loaderId}/{chunkId}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Put,
@@ -68,7 +93,7 @@ namespace Flowise
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
