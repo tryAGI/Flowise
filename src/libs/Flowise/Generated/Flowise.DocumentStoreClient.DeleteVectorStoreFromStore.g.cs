@@ -5,6 +5,25 @@ namespace Flowise
 {
     public partial class DocumentStoreClient
     {
+
+
+        private static readonly global::Flowise.EndPointSecurityRequirement s_DeleteVectorStoreFromStoreSecurityRequirement0 =
+            new global::Flowise.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Flowise.EndPointAuthorizationRequirement[]
+                {                    new global::Flowise.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Flowise.EndPointSecurityRequirement[] s_DeleteVectorStoreFromStoreSecurityRequirements =
+            new global::Flowise.EndPointSecurityRequirement[]
+            {                s_DeleteVectorStoreFromStoreSecurityRequirement0,
+            };
         partial void PrepareDeleteVectorStoreFromStoreArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string id);
@@ -33,9 +52,15 @@ namespace Flowise
                 httpClient: HttpClient,
                 id: ref id);
 
+
+            var __authorizations = global::Flowise.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_DeleteVectorStoreFromStoreSecurityRequirements,
+                operationName: "DeleteVectorStoreFromStoreAsync");
+
             var __pathBuilder = new global::Flowise.PathBuilder(
                 path: $"/document-store/vectorstore/{id}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Delete,
@@ -45,7 +70,7 @@ namespace Flowise
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

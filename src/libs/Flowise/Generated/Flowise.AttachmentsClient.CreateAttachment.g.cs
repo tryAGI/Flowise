@@ -5,6 +5,25 @@ namespace Flowise
 {
     public partial class AttachmentsClient
     {
+
+
+        private static readonly global::Flowise.EndPointSecurityRequirement s_CreateAttachmentSecurityRequirement0 =
+            new global::Flowise.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Flowise.EndPointAuthorizationRequirement[]
+                {                    new global::Flowise.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Flowise.EndPointSecurityRequirement[] s_CreateAttachmentSecurityRequirements =
+            new global::Flowise.EndPointSecurityRequirement[]
+            {                s_CreateAttachmentSecurityRequirement0,
+            };
         partial void PrepareCreateAttachmentArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string chatflowId,
@@ -51,9 +70,15 @@ namespace Flowise
                 chatId: ref chatId,
                 request: request);
 
+
+            var __authorizations = global::Flowise.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_CreateAttachmentSecurityRequirements,
+                operationName: "CreateAttachmentAsync");
+
             var __pathBuilder = new global::Flowise.PathBuilder(
                 path: $"/attachments/{chatflowId}/{chatId}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -63,7 +88,7 @@ namespace Flowise
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

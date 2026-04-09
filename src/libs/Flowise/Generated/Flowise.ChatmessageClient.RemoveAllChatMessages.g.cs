@@ -5,6 +5,25 @@ namespace Flowise
 {
     public partial class ChatmessageClient
     {
+
+
+        private static readonly global::Flowise.EndPointSecurityRequirement s_RemoveAllChatMessagesSecurityRequirement0 =
+            new global::Flowise.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Flowise.EndPointAuthorizationRequirement[]
+                {                    new global::Flowise.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Flowise.EndPointSecurityRequirement[] s_RemoveAllChatMessagesSecurityRequirements =
+            new global::Flowise.EndPointSecurityRequirement[]
+            {                s_RemoveAllChatMessagesSecurityRequirement0,
+            };
         partial void PrepareRemoveAllChatMessagesArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string id,
@@ -79,6 +98,12 @@ namespace Flowise
                 feedbackType: ref feedbackType,
                 hardDelete: ref hardDelete);
 
+
+            var __authorizations = global::Flowise.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_RemoveAllChatMessagesSecurityRequirements,
+                operationName: "RemoveAllChatMessagesAsync");
+
             var __pathBuilder = new global::Flowise.PathBuilder(
                 path: $"/chatmessage/{id}",
                 baseUri: HttpClient.BaseAddress); 
@@ -91,7 +116,7 @@ namespace Flowise
                 .AddOptionalParameter("endDate", endDate)
                 .AddOptionalParameter("feedbackType", feedbackType?.ToValueString())
                 .AddOptionalParameter("hardDelete", hardDelete?.ToString().ToLowerInvariant()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Delete,
@@ -101,7 +126,7 @@ namespace Flowise
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
