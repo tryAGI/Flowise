@@ -24,6 +24,7 @@ namespace Flowise
         /// </param>
         /// <param name="feedback"></param>
         /// <param name="feedbackType"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Flowise.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Flowise.ChatMessage>> GetAllChatMessagesAsync(
@@ -37,6 +38,7 @@ namespace Flowise
             global::System.DateTime? endDate = default,
             bool? feedback = default,
             global::Flowise.GetAllChatMessagesFeedbackType? feedbackType = default,
+            global::Flowise.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

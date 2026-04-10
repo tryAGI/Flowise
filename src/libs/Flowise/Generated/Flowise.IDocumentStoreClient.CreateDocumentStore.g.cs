@@ -9,11 +9,13 @@ namespace Flowise
         /// Creates a new document store with the provided details
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Flowise.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Flowise.DocumentStore> CreateDocumentStoreAsync(
 
             global::Flowise.DocumentStore request,
+            global::Flowise.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a new document store<br/>
@@ -52,6 +54,7 @@ namespace Flowise
         /// <param name="updatedDate">
         /// Date and time when the document store was last updated
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Flowise.DocumentStore> CreateDocumentStoreAsync(
@@ -66,6 +69,7 @@ namespace Flowise
             string? recordManagerConfig = default,
             global::System.DateTime? createdDate = default,
             global::System.DateTime? updatedDate = default,
+            global::Flowise.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
