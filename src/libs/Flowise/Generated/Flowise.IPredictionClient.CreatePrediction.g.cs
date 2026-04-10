@@ -11,12 +11,14 @@ namespace Flowise
         /// </summary>
         /// <param name="id"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Flowise.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Flowise.CreatePredictionResponse> CreatePredictionAsync(
             string id,
 
             global::Flowise.Prediction request,
+            global::Flowise.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Send message to flow and get AI response<br/>
@@ -53,6 +55,7 @@ namespace Flowise
         /// Return human feedback and resume execution from a stopped checkpoint<br/>
         /// Example: {"type":"reject","feedback":"Include more emoji"}
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Flowise.CreatePredictionResponse> CreatePredictionAsync(
@@ -64,6 +67,7 @@ namespace Flowise
             global::System.Collections.Generic.IList<global::Flowise.PredictionHistoryItem>? history = default,
             global::System.Collections.Generic.IList<global::Flowise.PredictionUpload>? uploads = default,
             global::Flowise.PredictionHumanInput? humanInput = default,
+            global::Flowise.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

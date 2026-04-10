@@ -12,6 +12,7 @@ namespace Flowise
         /// <param name="loaderId"></param>
         /// <param name="chunkId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Flowise.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Flowise.DocumentStoreFileChunkPagedResponse> EditDocumentStoreFileChunkAsync(
@@ -20,6 +21,7 @@ namespace Flowise
             string chunkId,
 
             global::Flowise.Document request,
+            global::Flowise.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update a specific chunk<br/>
@@ -34,6 +36,7 @@ namespace Flowise
         /// <param name="metadata">
         /// Example: {"author":"John Doe","date":"2024-08-24"}
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Flowise.DocumentStoreFileChunkPagedResponse> EditDocumentStoreFileChunkAsync(
@@ -42,6 +45,7 @@ namespace Flowise
             string chunkId,
             string? pageContent = default,
             global::System.Collections.Generic.Dictionary<string, string>? metadata = default,
+            global::Flowise.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

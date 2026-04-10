@@ -10,12 +10,14 @@ namespace Flowise
         /// </summary>
         /// <param name="id"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Flowise.ApiException"></exception>
         global::System.Threading.Tasks.Task PatchDeleteUpsertHistoryAsync(
             string id,
 
             global::Flowise.PatchDeleteUpsertHistoryRequest request,
+            global::Flowise.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Delete upsert history records<br/>
@@ -25,11 +27,13 @@ namespace Flowise
         /// <param name="ids">
         /// List of upsert history record IDs to delete
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task PatchDeleteUpsertHistoryAsync(
             string id,
             global::System.Collections.Generic.IList<global::System.Guid>? ids = default,
+            global::Flowise.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

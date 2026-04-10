@@ -30,6 +30,9 @@ namespace Flowise
 #if DEBUG
             = true;
 #endif
+
+        /// <inheritdoc/>
+        public global::Flowise.AutoSDKClientOptions Options { get; }
         /// <summary>
         /// 
         /// </summary>
@@ -39,7 +42,7 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        public AssistantsClient Assistants => new AssistantsClient(HttpClient, authorizations: Authorizations)
+        public AssistantsClient Assistants => new AssistantsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -48,7 +51,7 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        public AttachmentsClient Attachments => new AttachmentsClient(HttpClient, authorizations: Authorizations)
+        public AttachmentsClient Attachments => new AttachmentsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -57,7 +60,7 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        public ChatflowsClient Chatflows => new ChatflowsClient(HttpClient, authorizations: Authorizations)
+        public ChatflowsClient Chatflows => new ChatflowsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -66,7 +69,7 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        public ChatmessageClient Chatmessage => new ChatmessageClient(HttpClient, authorizations: Authorizations)
+        public ChatmessageClient Chatmessage => new ChatmessageClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -75,7 +78,7 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        public DocumentStoreClient DocumentStore => new DocumentStoreClient(HttpClient, authorizations: Authorizations)
+        public DocumentStoreClient DocumentStore => new DocumentStoreClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -84,7 +87,7 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        public FeedbackClient Feedback => new FeedbackClient(HttpClient, authorizations: Authorizations)
+        public FeedbackClient Feedback => new FeedbackClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -93,7 +96,7 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        public LeadsClient Leads => new LeadsClient(HttpClient, authorizations: Authorizations)
+        public LeadsClient Leads => new LeadsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -102,7 +105,7 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        public PingClient Ping => new PingClient(HttpClient, authorizations: Authorizations)
+        public PingClient Ping => new PingClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -111,7 +114,7 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        public PredictionClient Prediction => new PredictionClient(HttpClient, authorizations: Authorizations)
+        public PredictionClient Prediction => new PredictionClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -120,7 +123,7 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        public ToolsClient Tools => new ToolsClient(HttpClient, authorizations: Authorizations)
+        public ToolsClient Tools => new ToolsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -129,7 +132,7 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        public UpsertHistoryClient UpsertHistory => new UpsertHistoryClient(HttpClient, authorizations: Authorizations)
+        public UpsertHistoryClient UpsertHistory => new UpsertHistoryClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -138,7 +141,7 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        public VariablesClient Variables => new VariablesClient(HttpClient, authorizations: Authorizations)
+        public VariablesClient Variables => new VariablesClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -147,7 +150,7 @@ namespace Flowise
         /// <summary>
         /// 
         /// </summary>
-        public VectorClient Vector => new VectorClient(HttpClient, authorizations: Authorizations)
+        public VectorClient Vector => new VectorClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -166,11 +169,37 @@ namespace Flowise
             global::System.Net.Http.HttpClient? httpClient = null,
             global::System.Uri? baseUri = null,
             global::System.Collections.Generic.List<global::Flowise.EndPointAuthorization>? authorizations = null,
+            bool disposeHttpClient = true) : this(
+                httpClient,
+                baseUri,
+                authorizations,
+                options: null,
+                disposeHttpClient: disposeHttpClient)
+        {
+        }
+
+        /// <summary>
+        /// Creates a new instance of the FlowiseClient.
+        /// If no httpClient is provided, a new one will be created.
+        /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
+        /// </summary>
+        /// <param name="httpClient">The HttpClient instance. If not provided, a new one will be created.</param>
+        /// <param name="baseUri">The base URL for the API. If not provided, the default baseUri from OpenAPI spec will be used.</param>
+        /// <param name="authorizations">The authorizations to use for the requests.</param>
+        /// <param name="options">Client-wide request defaults such as headers, query parameters, retries, and timeout.</param>
+        /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
+        public FlowiseClient(
+            global::System.Net.Http.HttpClient? httpClient = null,
+            global::System.Uri? baseUri = null,
+            global::System.Collections.Generic.List<global::Flowise.EndPointAuthorization>? authorizations = null,
+            global::Flowise.AutoSDKClientOptions? options = null,
             bool disposeHttpClient = true)
         {
+
             HttpClient = httpClient ?? new global::System.Net.Http.HttpClient();
             HttpClient.BaseAddress ??= baseUri ?? new global::System.Uri(DefaultBaseUrl);
             Authorizations = authorizations ?? new global::System.Collections.Generic.List<global::Flowise.EndPointAuthorization>();
+            Options = options ?? new global::Flowise.AutoSDKClientOptions();
             _disposeHttpClient = disposeHttpClient;
 
             Initialized(HttpClient);

@@ -9,11 +9,13 @@ namespace Flowise
         /// Create new feedback for a specific chat flow.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Flowise.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Flowise.ChatMessageFeedback> CreateChatMessageFeedbackForChatflowAsync(
 
             global::Flowise.ChatMessageFeedback request,
+            global::Flowise.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create new chat message feedback<br/>
@@ -40,6 +42,7 @@ namespace Flowise
         /// <param name="createdDate">
         /// Date and time when the feedback was created
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Flowise.ChatMessageFeedback> CreateChatMessageFeedbackForChatflowAsync(
@@ -50,6 +53,7 @@ namespace Flowise
             global::Flowise.ChatMessageFeedbackRating? rating = default,
             string? content = default,
             global::System.DateTime? createdDate = default,
+            global::Flowise.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
