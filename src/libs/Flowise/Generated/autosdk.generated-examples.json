@@ -1,0 +1,26 @@
+{
+  "Examples": [
+    {
+      "Order": 1,
+      "Title": "Ping the server",
+      "Slug": "pingserver",
+      "Description": "Ping the server to check if it is running",
+      "Language": "csharp",
+      "Code": "using var client = new FlowiseClient();\nvar response = await client.Ping.PingServerAsync();\n\n// Example response:\n// \u0022pong\u0022",
+      "Format": "sdk",
+      "OperationId": "pingServer",
+      "Setup": "This example assumes \u0060using Flowise;\u0060 is in scope."
+    },
+    {
+      "Order": 2,
+      "Title": "Send message to flow and get AI response",
+      "Slug": "createprediction",
+      "Description": "Send a message to your flow and receive an AI-generated response. This is the primary endpoint for interacting with your flows and assistants.\n**Authentication**: API key may be required depending on flow settings.",
+      "Language": "http",
+      "Code": "### Send message to flow and get AI response\n# @name createPrediction\nPOST {{host}}/prediction/{{id}}\nAuthorization: Bearer {{token}}\nContent-Type: application/json\nAccept: application/json\n\n{\n  \u0022question\u0022: \u0022What is artificial intelligence?\u0022,\n  \u0022form\u0022: {\n    \u0022title\u0022: \u0022Example\u0022,\n    \u0022count\u0022: 1\n  },\n  \u0022streaming\u0022: false,\n  \u0022overrideConfig\u0022: {\n    \u0022sessionId\u0022: \u0022user-session-123\u0022,\n    \u0022temperature\u0022: 0.7,\n    \u0022maxTokens\u0022: 500,\n    \u0022vars\u0022: {\n      \u0022user_name\u0022: \u0022Alice\u0022\n    }\n  },\n  \u0022history\u0022: [\n    {\n      \u0022role\u0022: \u0022apiMessage\u0022,\n      \u0022content\u0022: \u0022Hello! I\\u0027m an AI assistant. How can I help you today?\u0022\n    },\n    {\n      \u0022role\u0022: \u0022userMessage\u0022,\n      \u0022content\u0022: \u0022Hi, my name is Sarah and I\\u0027m learning about AI\u0022\n    }\n  ],\n  \u0022uploads\u0022: [\n    {\n      \u0022type\u0022: \u0022file\u0022,\n      \u0022name\u0022: \u0022example.png\u0022,\n      \u0022data\u0022: \u0022data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABjElEQVRIS\\u002B2Vv0oDQRDG\u0022,\n      \u0022mime\u0022: \u0022image/png\u0022\n    }\n  ],\n  \u0022humanInput\u0022: {\n    \u0022type\u0022: \u0022reject\u0022,\n    \u0022feedback\u0022: \u0022Include more emoji\u0022\n  }\n}\n\n## Responses\n# 200\n# Description: Successful prediction response\n# Content-Type: application/json\n# 400\n# Description: Bad Request - Invalid input provided or request format is incorrect\n# Content-Type: application/json\n# 401\n# Description: Unauthorized - API key required or invalid\n# Content-Type: application/json\n# 404\n# Description: Not Found - Chatflow with specified ID does not exist\n# Content-Type: application/json\n# 413\n# Description: Payload Too Large - Request payload exceeds size limits\n# Content-Type: application/json\n# 422\n# Description: Validation Error - Request validation failed\n# Content-Type: application/json\n# 500\n# Description: Internal Server Error - Flow configuration or execution error\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "createPrediction",
+      "Setup": null
+    }
+  ]
+}
