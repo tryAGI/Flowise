@@ -135,9 +135,9 @@ namespace Flowise
                 PrepareGetDocumentStoreFileChunksRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    storeId: storeId,
-                    loaderId: loaderId,
-                    pageNo: pageNo);
+                    storeId: storeId!,
+                    loaderId: loaderId!,
+                    pageNo: pageNo!);
 
                 return __httpRequest;
             }

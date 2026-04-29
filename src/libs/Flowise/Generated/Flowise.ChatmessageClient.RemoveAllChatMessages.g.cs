@@ -176,7 +176,7 @@ namespace Flowise
                 PrepareRemoveAllChatMessagesRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     chatId: chatId,
                     memoryType: memoryType,
                     sessionId: sessionId,

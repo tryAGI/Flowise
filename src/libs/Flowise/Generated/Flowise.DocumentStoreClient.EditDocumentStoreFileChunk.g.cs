@@ -149,9 +149,9 @@ namespace Flowise
                 PrepareEditDocumentStoreFileChunkRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    storeId: storeId,
-                    loaderId: loaderId,
-                    chunkId: chunkId,
+                    storeId: storeId!,
+                    loaderId: loaderId!,
+                    chunkId: chunkId!,
                     request: request);
 
                 return __httpRequest;

@@ -187,7 +187,7 @@ namespace Flowise
                 PrepareGetAllChatMessagesRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     chatType: chatType,
                     order: order,
                     chatId: chatId,

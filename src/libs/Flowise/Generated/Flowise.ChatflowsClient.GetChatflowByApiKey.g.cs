@@ -125,7 +125,7 @@ namespace Flowise
                 PrepareGetChatflowByApiKeyRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    apikey: apikey);
+                    apikey: apikey!);
 
                 return __httpRequest;
             }

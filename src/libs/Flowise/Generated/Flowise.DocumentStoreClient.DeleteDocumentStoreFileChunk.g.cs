@@ -130,9 +130,9 @@ namespace Flowise
                 PrepareDeleteDocumentStoreFileChunkRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    storeId: storeId,
-                    loaderId: loaderId,
-                    chunkId: chunkId);
+                    storeId: storeId!,
+                    loaderId: loaderId!,
+                    chunkId: chunkId!);
 
                 return __httpRequest;
             }
