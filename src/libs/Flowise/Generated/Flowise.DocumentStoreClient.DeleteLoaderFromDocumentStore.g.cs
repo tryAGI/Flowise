@@ -125,8 +125,8 @@ namespace Flowise
                 PrepareDeleteLoaderFromDocumentStoreRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    storeId: storeId,
-                    loaderId: loaderId);
+                    storeId: storeId!,
+                    loaderId: loaderId!);
 
                 return __httpRequest;
             }

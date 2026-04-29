@@ -147,7 +147,7 @@ namespace Flowise
                 PrepareGetAllUpsertHistoryRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     order: order,
                     startDate: startDate,
                     endDate: endDate);

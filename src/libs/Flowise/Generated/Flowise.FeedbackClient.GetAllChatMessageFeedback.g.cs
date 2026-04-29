@@ -153,7 +153,7 @@ namespace Flowise
                 PrepareGetAllChatMessageFeedbackRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     chatId: chatId,
                     sortOrder: sortOrder,
                     startDate: startDate,
