@@ -24,6 +24,21 @@ namespace Flowise
         /// Upsert document to document store
         /// </summary>
         /// <param name="id"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Flowise.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Flowise.AutoSDKHttpResponse<global::Flowise.VectorUpsertResponse>> UpsertDocumentAsResponseAsync(
+            global::System.Guid id,
+
+            global::Flowise.DocumentStoreLoaderForUpsert request,
+            global::Flowise.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Upsert document to document store<br/>
+        /// Upsert document to document store
+        /// </summary>
+        /// <param name="id"></param>
         /// <param name="docId">
         /// Document ID within the store. If provided, existing configuration from the document will be used for the new document
         /// </param>

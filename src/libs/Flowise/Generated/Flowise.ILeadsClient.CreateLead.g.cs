@@ -21,6 +21,19 @@ namespace Flowise
         /// Create a new lead in a chatflow<br/>
         /// Create a new lead associated with a specific chatflow
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Flowise.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Flowise.AutoSDKHttpResponse<global::Flowise.Lead>> CreateLeadAsResponseAsync(
+
+            global::Flowise.Lead request,
+            global::Flowise.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create a new lead in a chatflow<br/>
+        /// Create a new lead associated with a specific chatflow
+        /// </summary>
         /// <param name="id">
         /// Unique identifier for the lead<br/>
         /// Example: cfd531e0-82fc-11e9-bc42-526af7764f64
