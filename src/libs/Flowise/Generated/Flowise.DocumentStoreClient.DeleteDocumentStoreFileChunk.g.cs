@@ -57,6 +57,31 @@ namespace Flowise
             global::Flowise.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            await DeleteDocumentStoreFileChunkAsResponseAsync(
+                storeId: storeId,
+                loaderId: loaderId,
+                chunkId: chunkId,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+        }
+        /// <summary>
+        /// Delete a specific chunk from a document loader<br/>
+        /// Delete a specific chunk from a document loader
+        /// </summary>
+        /// <param name="storeId"></param>
+        /// <param name="loaderId"></param>
+        /// <param name="chunkId"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Flowise.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Flowise.AutoSDKHttpResponse> DeleteDocumentStoreFileChunkAsResponseAsync(
+            string storeId,
+            string loaderId,
+            string chunkId,
+            global::Flowise.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareDeleteDocumentStoreFileChunkArguments(
@@ -87,6 +112,7 @@ namespace Flowise
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Flowise.PathBuilder(
                                 path: $"/document-store/chunks/{storeId}/{loaderId}/{chunkId}",
                                 baseUri: HttpClient.BaseAddress);
@@ -162,6 +188,8 @@ namespace Flowise
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -172,6 +200,11 @@ namespace Flowise
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Flowise.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Flowise.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -189,6 +222,8 @@ namespace Flowise
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -198,8 +233,7 @@ namespace Flowise
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Flowise.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -208,6 +242,11 @@ namespace Flowise
                         __attempt < __maxAttempts &&
                         global::Flowise.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Flowise.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Flowise.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Flowise.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -224,14 +263,15 @@ namespace Flowise
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Flowise.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -271,6 +311,8 @@ namespace Flowise
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -291,6 +333,8 @@ namespace Flowise
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                             // 
@@ -410,6 +454,10 @@ namespace Flowise
                                 {
                                     __response.EnsureSuccessStatusCode();
 
+                return new global::Flowise.AutoSDKHttpResponse(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Flowise.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -431,6 +479,10 @@ namespace Flowise
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
+                                    return new global::Flowise.AutoSDKHttpResponse(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Flowise.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

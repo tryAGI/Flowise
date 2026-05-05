@@ -72,6 +72,41 @@ namespace Flowise
             global::Flowise.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await GetAllChatMessageFeedbackAsResponseAsync(
+                id: id,
+                chatId: chatId,
+                sortOrder: sortOrder,
+                startDate: startDate,
+                endDate: endDate,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// List all chat message feedbacks for a chatflow<br/>
+        /// Retrieve all feedbacks for a chatflow
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="chatId"></param>
+        /// <param name="sortOrder">
+        /// Default Value: asc
+        /// </param>
+        /// <param name="startDate"></param>
+        /// <param name="endDate"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Flowise.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Flowise.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Flowise.ChatMessageFeedback>>> GetAllChatMessageFeedbackAsResponseAsync(
+            string id,
+            string? chatId = default,
+            global::Flowise.GetAllChatMessageFeedbackSortOrder? sortOrder = default,
+            global::System.DateTime? startDate = default,
+            global::System.DateTime? endDate = default,
+            global::Flowise.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareGetAllChatMessageFeedbackArguments(
@@ -104,14 +139,15 @@ namespace Flowise
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Flowise.PathBuilder(
                                 path: $"/feedback/{id}",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: HttpClient.BaseAddress);
                             __pathBuilder
                                 .AddOptionalParameter("chatId", chatId)
                                 .AddOptionalParameter("sortOrder", sortOrder?.ToValueString())
                                 .AddOptionalParameter("startDate", startDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
-                                .AddOptionalParameter("endDate", endDate?.ToString("yyyy-MM-ddTHH:mm:ssZ")) 
+                                .AddOptionalParameter("endDate", endDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Flowise.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -187,6 +223,8 @@ namespace Flowise
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -197,6 +235,11 @@ namespace Flowise
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Flowise.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Flowise.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -214,6 +257,8 @@ namespace Flowise
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -223,8 +268,7 @@ namespace Flowise
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Flowise.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -233,6 +277,11 @@ namespace Flowise
                         __attempt < __maxAttempts &&
                         global::Flowise.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Flowise.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Flowise.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Flowise.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -249,14 +298,15 @@ namespace Flowise
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Flowise.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -296,6 +346,8 @@ namespace Flowise
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -316,6 +368,8 @@ namespace Flowise
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                             // 
@@ -373,9 +427,13 @@ namespace Flowise
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        (global::System.Collections.Generic.IList<global::Flowise.ChatMessageFeedback>?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::Flowise.ChatMessageFeedback>), JsonSerializerContext) ??
+                                    var __value = (global::System.Collections.Generic.IList<global::Flowise.ChatMessageFeedback>?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::Flowise.ChatMessageFeedback>), JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Flowise.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Flowise.ChatMessageFeedback>>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Flowise.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -403,9 +461,13 @@ namespace Flowise
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return
-                                        (global::System.Collections.Generic.IList<global::Flowise.ChatMessageFeedback>?)await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::Flowise.ChatMessageFeedback>), JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = (global::System.Collections.Generic.IList<global::Flowise.ChatMessageFeedback>?)await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::Flowise.ChatMessageFeedback>), JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Flowise.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Flowise.ChatMessageFeedback>>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Flowise.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
