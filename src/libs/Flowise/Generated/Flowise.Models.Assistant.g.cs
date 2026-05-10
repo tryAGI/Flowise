@@ -99,5 +99,6 @@ namespace Flowise
         public Assistant()
         {
         }
+
     }
 }

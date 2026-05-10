@@ -59,5 +59,6 @@ namespace Flowise
         public PredictionHistoryItem()
         {
         }
+
     }
 }
