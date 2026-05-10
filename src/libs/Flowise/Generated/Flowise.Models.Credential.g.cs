@@ -102,5 +102,6 @@ namespace Flowise
         public Credential()
         {
         }
+
     }
 }

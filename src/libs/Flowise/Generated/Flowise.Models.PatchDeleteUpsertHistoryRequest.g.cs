@@ -41,5 +41,6 @@ namespace Flowise
         public PatchDeleteUpsertHistoryRequest()
         {
         }
+
     }
 }

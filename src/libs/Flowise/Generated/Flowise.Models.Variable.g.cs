@@ -114,5 +114,6 @@ namespace Flowise
         public Variable()
         {
         }
+
     }
 }

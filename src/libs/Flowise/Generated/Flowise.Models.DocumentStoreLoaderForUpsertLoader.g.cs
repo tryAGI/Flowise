@@ -55,5 +55,6 @@ namespace Flowise
         public DocumentStoreLoaderForUpsertLoader()
         {
         }
+
     }
 }

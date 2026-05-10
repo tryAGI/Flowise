@@ -130,5 +130,6 @@ namespace Flowise
         public Prediction()
         {
         }
+
     }
 }

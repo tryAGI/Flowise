@@ -50,5 +50,6 @@ namespace Flowise
         public QueryVectorStoreResponse()
         {
         }
+
     }
 }
