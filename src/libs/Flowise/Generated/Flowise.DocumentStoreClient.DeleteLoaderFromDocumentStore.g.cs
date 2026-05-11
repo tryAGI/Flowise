@@ -151,6 +151,8 @@ namespace Flowise
                     storeId: storeId!,
                     loaderId: loaderId!);
 
+                global::Flowise.AutoSDKHttpRequestOptions.StampAuthorizationOverride(__httpRequest);
+
                 return __httpRequest;
             }
 

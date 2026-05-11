@@ -207,6 +207,8 @@ namespace Flowise
                     chatId: chatId!,
                     request: request);
 
+                global::Flowise.AutoSDKHttpRequestOptions.StampAuthorizationOverride(__httpRequest);
+
                 return __httpRequest;
             }
 
@@ -834,6 +836,8 @@ namespace Flowise
                     chatId: chatId!,
                     request: request);
 
+                global::Flowise.AutoSDKHttpRequestOptions.StampAuthorizationOverride(__httpRequest);
+
                 return __httpRequest;
             }
 
@@ -1414,6 +1418,8 @@ namespace Flowise
                     chatflowId: chatflowId!,
                     chatId: chatId!,
                     request: request);
+
+                global::Flowise.AutoSDKHttpRequestOptions.StampAuthorizationOverride(__httpRequest);
 
                 return __httpRequest;
             }

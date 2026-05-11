@@ -185,6 +185,8 @@ namespace Flowise
                     startDate: startDate,
                     endDate: endDate);
 
+                global::Flowise.AutoSDKHttpRequestOptions.StampAuthorizationOverride(__httpRequest);
+
                 return __httpRequest;
             }
 
