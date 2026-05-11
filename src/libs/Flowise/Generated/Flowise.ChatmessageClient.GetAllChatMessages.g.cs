@@ -253,6 +253,8 @@ namespace Flowise
                     feedback: feedback,
                     feedbackType: feedbackType);
 
+                global::Flowise.AutoSDKHttpRequestOptions.StampAuthorizationOverride(__httpRequest);
+
                 return __httpRequest;
             }
 
