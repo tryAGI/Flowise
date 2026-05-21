@@ -100,5 +100,6 @@ namespace Flowise
         public UpsertHistoryResponse()
         {
         }
+
     }
 }

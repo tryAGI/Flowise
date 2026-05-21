@@ -187,6 +187,8 @@ namespace Flowise
                     chunkId: chunkId!,
                     request: request);
 
+                global::Flowise.AutoSDKHttpRequestOptions.StampAuthorizationOverride(__httpRequest);
+
                 return __httpRequest;
             }
 

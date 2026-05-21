@@ -236,6 +236,8 @@ namespace Flowise
                     feedbackType: feedbackType,
                     hardDelete: hardDelete);
 
+                global::Flowise.AutoSDKHttpRequestOptions.StampAuthorizationOverride(__httpRequest);
+
                 return __httpRequest;
             }
 

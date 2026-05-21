@@ -128,5 +128,6 @@ namespace Flowise
         public Lead()
         {
         }
+
     }
 }

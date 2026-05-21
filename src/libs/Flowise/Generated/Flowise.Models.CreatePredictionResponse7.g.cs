@@ -42,5 +42,6 @@ namespace Flowise
         public CreatePredictionResponse7()
         {
         }
+
     }
 }

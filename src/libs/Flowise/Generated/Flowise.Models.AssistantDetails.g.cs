@@ -132,5 +132,6 @@ namespace Flowise
         public AssistantDetails()
         {
         }
+
     }
 }

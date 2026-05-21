@@ -200,5 +200,6 @@ namespace Flowise
         public ChatMessage()
         {
         }
+
     }
 }

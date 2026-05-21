@@ -111,5 +111,6 @@ namespace Flowise
         public CreatePredictionRequest()
         {
         }
+
     }
 }

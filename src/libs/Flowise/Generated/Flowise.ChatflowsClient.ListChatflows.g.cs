@@ -140,6 +140,8 @@ namespace Flowise
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest);
 
+                global::Flowise.AutoSDKHttpRequestOptions.StampAuthorizationOverride(__httpRequest);
+
                 return __httpRequest;
             }
 
