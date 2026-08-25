@@ -159,14 +159,6 @@ namespace Flowise
             }
 
                             var __httpRequestContent = new global::System.Net.Http.MultipartFormDataContent();
-                            __httpRequestContent.Add(
-                                content: new global::System.Net.Http.StringContent(chatflowId ?? string.Empty),
-                                name: "\"chatflowId\"");
-
-                            __httpRequestContent.Add(
-                                content: new global::System.Net.Http.StringContent(chatId ?? string.Empty),
-                                name: "\"chatId\"");
-
                             for (var __iFiles = 0; __iFiles < request.Files.Count; __iFiles++)
                             {
                                 var __contentFiles = new global::System.Net.Http.ByteArrayContent(request.Files[__iFiles]);
@@ -748,14 +740,6 @@ namespace Flowise
             }
 
                             var __httpRequestContent = new global::System.Net.Http.MultipartFormDataContent();
-                            __httpRequestContent.Add(
-                                content: new global::System.Net.Http.StringContent(chatflowId ?? string.Empty),
-                                name: "\"chatflowId\"");
-
-                            __httpRequestContent.Add(
-                                content: new global::System.Net.Http.StringContent(chatId ?? string.Empty),
-                                name: "\"chatId\"");
-
                             for (var __iFiles = 0; __iFiles < files.Count; __iFiles++)
                             {
                                 var __fileNameFiles = filesFileNames != null &&
@@ -1323,14 +1307,6 @@ namespace Flowise
             }
 
                             var __httpRequestContent = new global::System.Net.Http.MultipartFormDataContent();
-                            __httpRequestContent.Add(
-                                content: new global::System.Net.Http.StringContent(chatflowId ?? string.Empty),
-                                name: "\"chatflowId\"");
-
-                            __httpRequestContent.Add(
-                                content: new global::System.Net.Http.StringContent(chatId ?? string.Empty),
-                                name: "\"chatId\"");
-
                             for (var __iFiles = 0; __iFiles < files.Count; __iFiles++)
                             {
                                 var __fileNameFiles = filesFileNames != null &&
