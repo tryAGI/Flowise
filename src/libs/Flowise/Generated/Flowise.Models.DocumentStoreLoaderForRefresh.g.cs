@@ -4,12 +4,12 @@
 namespace Flowise
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class DocumentStoreLoaderForRefresh
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("items")]
         public global::System.Collections.Generic.IList<global::Flowise.DocumentStoreLoaderForUpsert>? Items { get; set; }

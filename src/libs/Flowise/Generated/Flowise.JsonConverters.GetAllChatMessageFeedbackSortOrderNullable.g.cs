@@ -20,7 +20,7 @@ namespace Flowise.JsonConverters
                     {
                         return global::Flowise.GetAllChatMessageFeedbackSortOrderExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

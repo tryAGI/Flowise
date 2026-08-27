@@ -4,12 +4,12 @@
 namespace Flowise
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class DocumentStoreFileChunkPagedResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("chunks")]
         public global::System.Collections.Generic.IList<global::Flowise.DocumentStoreFileChunk>? Chunks { get; set; }
@@ -22,25 +22,25 @@ namespace Flowise
         public double? Count { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("file")]
         public global::Flowise.DocumentStoreLoaderForPreview? File { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("currentPage")]
         public double? CurrentPage { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("storeName")]
         public string? StoreName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
         public string? Description { get; set; }

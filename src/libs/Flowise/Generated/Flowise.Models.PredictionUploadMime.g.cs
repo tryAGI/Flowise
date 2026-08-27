@@ -10,47 +10,47 @@ namespace Flowise
     public enum PredictionUploadMime
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioAac,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioMp4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioMpeg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioOgg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioWav,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioWebm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageGif,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageJpeg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageJpg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImagePng,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageWebp,
     }

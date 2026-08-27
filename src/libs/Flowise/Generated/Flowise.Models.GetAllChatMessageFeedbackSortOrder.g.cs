@@ -9,11 +9,11 @@ namespace Flowise
     public enum GetAllChatMessageFeedbackSortOrder
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Asc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Desc,
     }

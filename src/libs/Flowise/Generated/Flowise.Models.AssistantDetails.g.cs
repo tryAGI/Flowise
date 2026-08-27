@@ -4,7 +4,7 @@
 namespace Flowise
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AssistantDetails
     {
@@ -23,7 +23,7 @@ namespace Flowise
         public string? Name { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
         public string? Description { get; set; }
@@ -64,7 +64,7 @@ namespace Flowise
         public global::System.Collections.Generic.IList<string>? Tools { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tool_resources")]
         public global::System.Collections.Generic.Dictionary<string, object>? ToolResources { get; set; }

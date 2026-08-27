@@ -4,7 +4,7 @@
 namespace Flowise
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ChatMessage
     {
@@ -38,37 +38,37 @@ namespace Flowise
         public string? Content { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sourceDocuments")]
         public global::System.Collections.Generic.IList<global::Flowise.Document>? SourceDocuments { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("usedTools")]
         public global::System.Collections.Generic.IList<global::Flowise.UsedTool>? UsedTools { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("fileAnnotations")]
         public global::System.Collections.Generic.IList<global::Flowise.FileAnnotation>? FileAnnotations { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agentReasoning")]
         public global::System.Collections.Generic.IList<global::Flowise.AgentReasoning>? AgentReasoning { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("fileUploads")]
         public global::System.Collections.Generic.IList<global::Flowise.FileUpload>? FileUploads { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         public global::System.Collections.Generic.IList<global::Flowise.Action>? Action { get; set; }
@@ -89,13 +89,13 @@ namespace Flowise
         public string? ChatId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("memoryType")]
         public string? MemoryType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sessionId")]
         public string? SessionId { get; set; }

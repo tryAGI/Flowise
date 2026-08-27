@@ -10,11 +10,11 @@ namespace Flowise
     public enum PredictionHumanInputType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Proceed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Reject,
     }

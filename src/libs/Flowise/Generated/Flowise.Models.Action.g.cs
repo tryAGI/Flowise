@@ -4,7 +4,7 @@
 namespace Flowise
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class Action
     {
@@ -16,13 +16,13 @@ namespace Flowise
         public global::System.Guid? Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mapping")]
         public global::Flowise.ActionMapping? Mapping { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("elements")]
         public byte[]? Elements { get; set; }

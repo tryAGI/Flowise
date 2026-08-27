@@ -4,7 +4,7 @@
 namespace Flowise
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class DocumentStoreLoaderForUpsert
     {
@@ -41,31 +41,31 @@ namespace Flowise
         public global::Flowise.DocumentStoreLoaderForUpsertDocStore? DocStore { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("loader")]
         public global::Flowise.DocumentStoreLoaderForUpsertLoader? Loader { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("splitter")]
         public global::Flowise.DocumentStoreLoaderForUpsertSplitter? Splitter { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("embedding")]
         public global::Flowise.DocumentStoreLoaderForUpsertEmbedding? Embedding { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("vectorStore")]
         public global::Flowise.DocumentStoreLoaderForUpsertVectorStore? VectorStore { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("recordManager")]
         public global::Flowise.DocumentStoreLoaderForUpsertRecordManager? RecordManager { get; set; }

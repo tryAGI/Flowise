@@ -4,7 +4,7 @@
 namespace Flowise
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class UsedTool
     {
@@ -23,7 +23,7 @@ namespace Flowise
         public global::System.Collections.Generic.Dictionary<string, string>? ToolInput { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("toolOutput")]
         public string? ToolOutput { get; set; }

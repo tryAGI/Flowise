@@ -39,73 +39,73 @@ namespace Flowise
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; }
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AssistantsClient Assistants { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AttachmentsClient Attachments { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatflowsClient Chatflows { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatmessageClient Chatmessage { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DocumentStoreClient DocumentStore { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FeedbackClient Feedback { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public LeadsClient Leads { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PingClient Ping { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PredictionClient Prediction { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolsClient Tools { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UpsertHistoryClient UpsertHistory { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public VariablesClient Variables { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public VectorClient Vector { get; }
 
