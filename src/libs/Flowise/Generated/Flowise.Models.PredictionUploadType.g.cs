@@ -10,23 +10,23 @@ namespace Flowise
     public enum PredictionUploadType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Audio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         File,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         File_full,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         File_rag,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Url,
     }

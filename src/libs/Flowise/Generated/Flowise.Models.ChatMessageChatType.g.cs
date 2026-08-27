@@ -9,11 +9,11 @@ namespace Flowise
     public enum ChatMessageChatType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         External,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Internal,
     }

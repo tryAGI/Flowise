@@ -4,7 +4,7 @@
 namespace Flowise
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class QueryVectorStoreResponse
     {
@@ -15,7 +15,7 @@ namespace Flowise
         public double? TimeTaken { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("docs")]
         public global::System.Collections.Generic.IList<global::Flowise.Document>? Docs { get; set; }

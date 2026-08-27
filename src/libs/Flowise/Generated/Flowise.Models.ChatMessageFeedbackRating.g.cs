@@ -9,11 +9,11 @@ namespace Flowise
     public enum ChatMessageFeedbackRating
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThumbsDown,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThumbsUp,
     }

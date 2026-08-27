@@ -9,11 +9,11 @@ namespace Flowise
     public enum ChatMessageRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApiMessage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UserMessage,
     }

@@ -10,11 +10,11 @@ namespace Flowise
     public enum PredictionHistoryItemRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApiMessage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UserMessage,
     }

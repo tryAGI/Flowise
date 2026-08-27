@@ -20,7 +20,7 @@ namespace Flowise.JsonConverters
                     {
                         return global::Flowise.PredictionUploadMimeExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

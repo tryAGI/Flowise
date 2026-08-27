@@ -9,11 +9,11 @@ namespace Flowise
     public enum GetAllUpsertHistoryOrder
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Asc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Desc,
     }

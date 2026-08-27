@@ -4,16 +4,16 @@
 namespace Flowise
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum RemoveAllChatMessagesFeedbackType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThumbsDown,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThumbsUp,
     }

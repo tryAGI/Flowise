@@ -4,16 +4,16 @@
 namespace Flowise
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ChatflowType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Chatflow,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Multiagent,
     }

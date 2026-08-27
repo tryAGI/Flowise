@@ -4,7 +4,7 @@
 namespace Flowise
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AgentReasoning
     {
@@ -37,19 +37,19 @@ namespace Flowise
         public string? NodeId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("usedTools")]
         public global::System.Collections.Generic.IList<global::Flowise.UsedTool>? UsedTools { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sourceDocuments")]
         public global::System.Collections.Generic.IList<global::Flowise.Document>? SourceDocuments { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("state")]
         public global::System.Collections.Generic.Dictionary<string, string>? State { get; set; }

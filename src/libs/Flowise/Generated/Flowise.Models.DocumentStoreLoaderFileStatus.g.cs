@@ -9,31 +9,31 @@ namespace Flowise
     public enum DocumentStoreLoaderFileStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Empty,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         New,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Stale,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sync,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Syncing,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Upserted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Upserting,
     }

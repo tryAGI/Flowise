@@ -4,7 +4,7 @@
 namespace Flowise
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class DocumentStoreLoaderForPreview
     {
@@ -76,7 +76,7 @@ namespace Flowise
         public string? StoreId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("files")]
         public global::System.Collections.Generic.IList<global::Flowise.DocumentStoreLoaderFile>? Files { get; set; }

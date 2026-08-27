@@ -10,7 +10,7 @@ namespace Flowise
     public sealed partial class FlowiseClient : global::Flowise.IFlowiseClient, global::System.IDisposable
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public const string DefaultBaseUrl = "";
 
@@ -37,7 +37,7 @@ namespace Flowise
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Flowise.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
@@ -47,7 +47,7 @@ namespace Flowise
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AssistantsClient Assistants => new AssistantsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -56,7 +56,7 @@ namespace Flowise
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AttachmentsClient Attachments => new AttachmentsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -65,7 +65,7 @@ namespace Flowise
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatflowsClient Chatflows => new ChatflowsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -74,7 +74,7 @@ namespace Flowise
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatmessageClient Chatmessage => new ChatmessageClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -83,7 +83,7 @@ namespace Flowise
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DocumentStoreClient DocumentStore => new DocumentStoreClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -92,7 +92,7 @@ namespace Flowise
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FeedbackClient Feedback => new FeedbackClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -101,7 +101,7 @@ namespace Flowise
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public LeadsClient Leads => new LeadsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -110,7 +110,7 @@ namespace Flowise
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PingClient Ping => new PingClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -119,7 +119,7 @@ namespace Flowise
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PredictionClient Prediction => new PredictionClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -128,7 +128,7 @@ namespace Flowise
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolsClient Tools => new ToolsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -137,7 +137,7 @@ namespace Flowise
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UpsertHistoryClient UpsertHistory => new UpsertHistoryClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -146,7 +146,7 @@ namespace Flowise
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public VariablesClient Variables => new VariablesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -155,7 +155,7 @@ namespace Flowise
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public VectorClient Vector => new VectorClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {

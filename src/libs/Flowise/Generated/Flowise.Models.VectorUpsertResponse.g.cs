@@ -4,7 +4,7 @@
 namespace Flowise
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class VectorUpsertResponse
     {
@@ -41,7 +41,7 @@ namespace Flowise
         public double? NumSkipped { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("addedDocs")]
         public global::System.Collections.Generic.IList<global::Flowise.Document>? AddedDocs { get; set; }
